@@ -95,7 +95,24 @@
     <h2>Tecnical details</h2>
   </hgroup>
   <article data-timings="">
-    <p>The app consists of an server.R and ui.R file. </p>
+    <p>The app consists of an server.R and ui.R file. THe power calculation is done by using the funciont pwr.t.test() from the pwr library
+Example:</p>
+
+<pre><code class="r">library(pwr)
+pwr.t.test(n=10, d=1.5, sig.level=0.05, type=&quot;paired&quot;)
+</code></pre>
+
+<pre><code>## 
+##      Paired t test power calculation 
+## 
+##               n = 10
+##               d = 1.5
+##       sig.level = 0.05
+##           power = 0.9872769
+##     alternative = two.sided
+## 
+## NOTE: n is number of *pairs*
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->

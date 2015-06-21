@@ -40,7 +40,27 @@ Stepwise guide how to use the app
 
 ## Tecnical details
 
-The app consists of an server.R and ui.R file. 
+The app consists of an server.R and ui.R file. THe power calculation is done by using the funciont pwr.t.test() from the pwr library
+Example:
+
+
+```r
+library(pwr)
+pwr.t.test(n=10, d=1.5, sig.level=0.05, type="paired")
+```
+
+```
+## 
+##      Paired t test power calculation 
+## 
+##               n = 10
+##               d = 1.5
+##       sig.level = 0.05
+##           power = 0.9872769
+##     alternative = two.sided
+## 
+## NOTE: n is number of *pairs*
+```
 
 ---
 
